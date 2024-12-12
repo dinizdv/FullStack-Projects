@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+:root {
+  --primary-color: #27374D;
+  --placeholder-color: #475364;
+  --secondary-color: #526D82;
+  --tertiary-color: #9DB2BF;
+  --light-color: #DDE6ED;
+
+  --transtion-03: all .3s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lexend, Arial, Helvetica, sans-serif!important;
+  background-color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  all: unset;
+}
+
+input, ::placeholder, button {
+  font-family: Lexend, Arial, Helvetica, sans-serif!important;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, button {
+  outline: none;
+}
