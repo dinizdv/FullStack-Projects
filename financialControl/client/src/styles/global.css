@@ -7,6 +7,8 @@
   --tertiary-color: #9DB2BF;
   --light-color: #DDE6ED;
 
+  --sidebar-width: 280px;
+
   --transtion-03: all .3s;
 }
 
@@ -14,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Lexend, Arial, Helvetica, sans-serif!important;
+  font-family:Lexend, Arial, Helvetica, sans-serif!important;
   background-color: var(--primary-color);
 }
 
@@ -32,4 +34,12 @@ button {
 
 input, button {
   outline: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  all: unset;
 }

@@ -1,0 +1,45 @@
+.container-summary {
+    margin-left: var(--sidebar-width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.container-style-summary {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, minMax(0, 1fr));
+    height: 90%;
+    padding: 12px;
+}
+
+.section-summary {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.section-summary h2 {
+    font-size: 1.4em;
+    text-transform: capitalize;
+}
+
+.section-summary label {
+    font-size: 2.8em;
+}
+
+.container-date {
+    margin-left: auto;
+    margin-right: 12px;
+    padding: 8px;
+    border: 1px solid var(--light-color);
+}
+
+.container-date label {
+    margin: 0;
+    color: var(--light-color);
+    font-weight: 100;
+    font-size: 1.2em;
+}
