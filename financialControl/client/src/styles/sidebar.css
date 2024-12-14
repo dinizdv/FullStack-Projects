@@ -6,7 +6,7 @@
     position: fixed;
     overflow-y: auto;
     flex-direction: column;
-    background-color: var(--light-color);
+    box-shadow: 0 0 3px 1px var(--light-color);
 }
 
 .logo-sidebar {
@@ -15,7 +15,7 @@
 
 .logo-sidebar label {
     font-size: 1.6em;
-    color: var(--primary-color);
+    color: var(--light-color);
 }
 
 .nav-sidebar {
@@ -36,7 +36,7 @@
     padding: 20px 16px;
     transition: var(--transtion-03);
     text-transform: capitalize;
-    color: var(--primary-color);
+    color: var(--light-color);
     display: flex;
     font-size: 1.2em;
     align-items: center;
@@ -45,6 +45,6 @@
 .ul-sidebar li:hover {
     padding-left: 32px;
     cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: var(--light-color);
+    color: var(--primary-color);
 }

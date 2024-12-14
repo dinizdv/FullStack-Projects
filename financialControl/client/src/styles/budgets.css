@@ -1,0 +1,43 @@
+.container-budgets {
+    margin-left: var(--sidebar-width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-style-budgets {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.budget {
+    background-color: var(--light-color);
+    width: 50%;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.budget h2 {
+    font-size: 1.6em;
+}
+
+.budget p {
+    margin: 8px 0 24px 0;
+}
+
+.budget button {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--light-color);
+    font-size: 1em;
+}
+
+.budget button .icon-budget {
+    margin-left: 6px;
+}

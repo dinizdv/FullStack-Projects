@@ -1,6 +1,7 @@
 import '../../styles/summary.css'
 import Sidebar from '../../Components/Sidebar'
 import { useState, useEffect } from 'react'
+import { IoHomeOutline } from "react-icons/io5";
 
 const Summary = () => {
     const [date, setDate] = useState<String | undefined>(undefined)
@@ -14,6 +15,10 @@ const Summary = () => {
             <>
                 <Sidebar />
                     <div className="container-summary">
+
+                        <div className="container-title">
+                            <h1><IoHomeOutline className='icon-title' />Summary</h1>
+                        </div>
 
                         <div className="container-style-summary">
                             <section className="section-summary current-month">
@@ -45,9 +50,9 @@ const Summary = () => {
                             </section>
                             </div>
 
-        <div className="container-date">
+        {/* <div className="container-date">
             <label>Today is {date}</label>
-        </div>
+        </div> */}
                     </div>
             </>
     )

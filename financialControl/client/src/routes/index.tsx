@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Summary from "../pages/Summary";
 import Login from "../pages/Login";
+import Summary from "../pages/Summary";
+import Budgets from "../pages/Budgets"
 
 
 const RoutesApp = () => {
@@ -8,6 +9,7 @@ const RoutesApp = () => {
         <Routes>
             <Route path='/' element={ <Login /> } />
             <Route path='/summary' element={ <Summary /> } />
+            <Route path='/budgets' element={ <Budgets /> } />
         </Routes>
     )
 }

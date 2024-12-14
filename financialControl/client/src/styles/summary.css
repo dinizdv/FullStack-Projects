@@ -6,19 +6,35 @@
     gap: 12px;
 }
 
+.container-title {
+    margin: 12px 12px 0 12px;
+}
+
+.container-title h1 {
+    color: var(--tertiary-color);
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.icon-title {
+    padding-right: 6px;
+}
+
 .container-style-summary {
     display: grid;
     gap: 12px;
     grid-template-columns: repeat(3, minMax(0, 1fr));
     height: 90%;
-    padding: 12px;
+    padding: 0 12px 12px 12px;
 }
 
 .section-summary {
-    background-color: var(--secondary-color);
+    background-color: var(--light-color);
     display: flex;
     flex-direction: column;
     padding: 12px;
+    border-radius: 6px;
 }
 
 .section-summary h2 {
