@@ -8,9 +8,35 @@ import { CgOptions } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
 import { FiSun } from "react-icons/fi";
+import { useState, useEffect } from 'react';
 
 
 const Sidebar = () => {
+    const [isLightMode, setIsLightMode] = useState(false)
+
+    useEffect(() => {
+        const body = document.body
+        if(isLightMode){
+            body.classList.add('light')
+        } else {
+            body.classList.remove('light')
+        }
+    }, [isLightMode])
+
+    useEffect(() => {
+        const storedLightMode = localStorage.getItem('@light')
+        if (storedLightMode){
+            setIsLightMode(true)
+        }
+    }, [])
+
+    function toggleMode(){
+        setIsLightMode(!isLightMode)
+        localStorage.setItem('@light', isLightMode ? 'Light Mode' : '')
+    }
+
+
+
     return(
         <div className='sidebar'>
             
@@ -37,7 +63,7 @@ const Sidebar = () => {
                     <Link to='/settings'>
                         <li className="li-sidebar"><IoSettingsOutline className='icon-sidebar'/>settings</li>
                     </Link>
-                    <li className="li-sidebar"><IoMoonOutline className='icon-sidebar'/>dark mode</li>
+                    <li className="li-sidebar" onClick={toggleMode}>{isLightMode ? (<IoMoonOutline className='icon-sidebar'/> ) : ( <FiSun className='icon-sidebar' />) }{isLightMode ? 'Dark Mode' : 'Light Mode'}</li>
                 </ul>
             </nav>
         </div>
