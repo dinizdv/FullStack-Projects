@@ -48,7 +48,3 @@
     background-color: var(--light-color);
     color: var(--primary-color);
 }
-
-body.dark .ul-sidebar li {
-    background-color: orange;
-}

@@ -1,0 +1,54 @@
+body.light {
+    background-color: var(--light-color);
+}
+
+/* sidebar */
+.light .sidebar {
+    background-color: var(--light-color);
+    box-shadow: 0 0 3px 1px var(--primary-color);
+}
+
+.light .sidebar label, .light .ul-sidebar li {
+    color: var(--primary-color);
+}
+
+.light .ul-sidebar li:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* summary */
+.light .section-summary {
+    background-color: var(--primary-color);
+}
+
+.light .container-title h1 {
+    color: var(--primary-color);
+}
+
+.light .section-summary h2, .light .section-summary label {
+    color: var(--light-color);
+}
+
+/* budgets */
+.light .budget {
+    background-color: var(--primary-color);
+}
+
+.light .budget h2, .light .budget p {
+    color: var(--light-color);
+}
+
+.light .budget button {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+/* settings */
+.light .container-style-settings {
+    background-color: var(--primary-color);
+}
+
+.light .container-style-settings label {
+    color: var(--light-color);
+}

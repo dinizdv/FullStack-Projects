@@ -22,10 +22,12 @@
 .budget h2 {
     font-size: 1.6em;
     text-transform: capitalize;
+    color: var(--primary-color);
 }
 
 .budget p {
     margin: 8px 0 24px 0;
+    color: var(--primary-color);
 }
 
 .budget button {

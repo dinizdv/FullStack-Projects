@@ -24,15 +24,15 @@ const Sidebar = () => {
     }, [isLightMode])
 
     useEffect(() => {
-        const storedLightMode = localStorage.getItem('@light')
-        if (storedLightMode){
+        const storedLightMode = localStorage.getItem('@theme')
+        if (storedLightMode !== 'Dark Mode'){
             setIsLightMode(true)
         }
     }, [])
 
     function toggleMode(){
         setIsLightMode(!isLightMode)
-        localStorage.setItem('@light', isLightMode ? 'Light Mode' : '')
+        localStorage.setItem('@theme', isLightMode ? 'Dark Mode' : 'Light Mode')
     }
 
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
                     <Link to='/settings'>
                         <li className="li-sidebar"><IoSettingsOutline className='icon-sidebar'/>settings</li>
                     </Link>
-                    <li className="li-sidebar" onClick={toggleMode}>{isLightMode ? (<IoMoonOutline className='icon-sidebar'/> ) : ( <FiSun className='icon-sidebar' />) }{isLightMode ? 'Dark Mode' : 'Light Mode'}</li>
+                    <li className="li-sidebar" onClick={toggleMode}>{isLightMode ? (<FiSun className='icon-sidebar'/> ) : ( <IoMoonOutline className='icon-sidebar' />) }{isLightMode ? 'Light Mode' : 'Dark Mode'}</li>
                 </ul>
             </nav>
         </div>

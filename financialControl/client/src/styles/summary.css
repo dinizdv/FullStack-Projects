@@ -41,10 +41,12 @@
 .section-summary h2 {
     font-size: 1.4em;
     text-transform: capitalize;
+    color: var(--primary-color);
 }
 
 .section-summary label {
     font-size: 2.8em;
+    color: var(--primary-color);
 }
 
 .container-date {
