@@ -1,8 +1,22 @@
 import '../../styles/login.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [name] = useState('Financial Control')
+    const [email, setEmail] = useState<String>()
+    const [password, setPassword] = useState<String>()
+    const navigate = useNavigate()
+
+    // already logged
+    useEffect(() => {
+        const isLogged = JSON.parse(localStorage.getItem('@userData') || '{}')
+        if (isLogged){
+            navigate('/summary', { replace: true })
+            toast.info(`Welcome back, ${JSON.parse(localStorage.getItem('@userData') || '{}').name}!`)
+        }
+    })
 
     function toSignUp(): void {
         const signIn = document.querySelector('#section-signIn') as HTMLElement | null
@@ -23,6 +37,41 @@ const Login = () => {
         signIn?.classList.remove('hidden');
     }
 
+async function loginAuth () {
+
+    try {
+        const response = await fetch('http://localhost:3000/api/users', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+
+        if (!email || !password){
+            toast.error('Email and password are required.')
+            return
+        }
+
+        const users = await response.json() // getting all users
+
+        const findUser = users.find((user: { email: String; password: String }) => {
+            return user.email === email && user.password === password
+        })
+
+        if (findUser){
+            navigate('/summary', { replace: true })
+            toast.dismiss() // close other toasts
+            toast.success(`Welcome to the system, ${findUser.name}!`)
+            localStorage.setItem('@userData', JSON.stringify(findUser))
+        } else {
+            toast.error('Email and password do not match.')
+        }
+
+    } catch (e){
+        console.log(`Error: ${e}`)
+    }
+}
+
     return(
         <div className='container-login'>
             <div className="container-style-login">
@@ -31,11 +80,11 @@ const Login = () => {
                     <h2>We are <b>{name}</b></h2>
                     <p>Welcome back! Log in your account to view today´s incomes and expenses</p>
                     <div className="container-input-login">
-                        <input type="email" placeholder='Your email' name="" id="" />
-                        <input type="password" placeholder='Your password' name="" id="" />
+                        <input type="email" placeholder='Your email' name="" id="" onChange={(e) => setEmail(e.target.value) } />
+                        <input type="password" placeholder='Your password' name="" id="" onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="container-btn-login">
-                        <button type="submit" id="btn-login">sign in</button>
+                        <button type="submit" id="btn-login" onClick={loginAuth}>sign in</button>
                         <div className="container-btn-register-account"><button id="btn-register-account" onClick={toSignUp}>Do not have account? Sign up!</button></div>
                     </div>                </div>
 
