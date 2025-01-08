@@ -1,6 +1,7 @@
 import '../../styles/login.css'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
+import { UserContext } from '../../contexts/userActivity'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
@@ -8,6 +9,8 @@ const Login = () => {
     const [email, setEmail] = useState<String>()
     const [password, setPassword] = useState<String>()
     const navigate = useNavigate()
+    const { userAuth } = useContext(UserContext)
+
 
     function toSignUp(): void {
         const signIn = document.querySelector('#section-signIn') as HTMLElement | null
@@ -54,6 +57,7 @@ async function loginAuth () {
             toast.dismiss() // close other toasts
             toast.success(`Welcome to the system, ${findUser.name}!`)
             localStorage.setItem('@userData', JSON.stringify(findUser))
+            userAuth()
         } else {
             toast.error('Email and password do not match.')
         }

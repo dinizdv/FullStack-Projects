@@ -1,5 +1,5 @@
 import React, { createContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 type UserContextType = {
@@ -18,12 +18,13 @@ interface UserProviderProps {
   
 const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const navigate = useNavigate();
+  const location = useLocation()
 
   const userData = JSON.parse(localStorage.getItem('@userData') || '{}')
 
   // is user logged
   const userAuth = () => {
-        if (userData && userData.name){
+        if (userData && userData.name && location.pathname === '/'){
             navigate('/summary')
             toast.info(`Welcome back, ${userData.name}`)
         }
