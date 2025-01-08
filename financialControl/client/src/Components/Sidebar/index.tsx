@@ -6,6 +6,7 @@ import { TbReportSearch } from "react-icons/tb";
 import { VscGraphLine } from "react-icons/vsc";
 import { CgOptions } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
+import { IoLogOutOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
 import { FiSun } from "react-icons/fi";
 import { useState, useEffect } from 'react';
@@ -35,7 +36,9 @@ const Sidebar = () => {
         localStorage.setItem('@theme', isLightMode ? 'Dark Mode' : 'Light Mode')
     }
 
-
+    function logout(){
+        localStorage.removeItem('@userData')
+    }
 
     return(
         <div className='sidebar'>
@@ -63,6 +66,9 @@ const Sidebar = () => {
                     <Link to='/settings'>
                         <li className="li-sidebar"><IoSettingsOutline className='icon-sidebar'/>settings</li>
                     </Link>
+                    <a href='' onClick={logout}>
+                        <li className="li-sidebar"><IoLogOutOutline className='icon-sidebar'/>logout</li>
+                    </a>
                     <li className="li-sidebar" onClick={toggleMode}>{isLightMode ? (<FiSun className='icon-sidebar'/> ) : ( <IoMoonOutline className='icon-sidebar' />) }{isLightMode ? 'Light Mode' : 'Dark Mode'}</li>
                 </ul>
             </nav>

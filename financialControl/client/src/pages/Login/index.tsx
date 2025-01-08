@@ -1,5 +1,5 @@
 import '../../styles/login.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 
@@ -8,15 +8,6 @@ const Login = () => {
     const [email, setEmail] = useState<String>()
     const [password, setPassword] = useState<String>()
     const navigate = useNavigate()
-
-    // already logged
-    useEffect(() => {
-        const isLogged = JSON.parse(localStorage.getItem('@userData') || '{}')
-        if (isLogged){
-            navigate('/summary', { replace: true })
-            toast.info(`Welcome back, ${JSON.parse(localStorage.getItem('@userData') || '{}').name}!`)
-        }
-    })
 
     function toSignUp(): void {
         const signIn = document.querySelector('#section-signIn') as HTMLElement | null
