@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 type UserContextType = {
   userAuth: () => void;
-  userData: { name?: string; [key: string]: any } | null;
+  userData: { name?: string; email?: string, password?: string } | null;
 };
 
 export const UserContext = createContext<UserContextType>({
