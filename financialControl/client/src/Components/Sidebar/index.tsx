@@ -1,5 +1,5 @@
 import '../../styles/sidebar.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IoHomeOutline } from "react-icons/io5";
 import { GoGoal } from "react-icons/go";
 import { TbReportSearch } from "react-icons/tb";
@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 
 const Sidebar = () => {
     const [isLightMode, setIsLightMode] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const body = document.body
@@ -38,6 +39,8 @@ const Sidebar = () => {
 
     function logout(){
         localStorage.removeItem('@userData')
+        localStorage.removeItem('@isUserLoggedIn')
+        navigate('/', { replace: true })
     }
 
     return(

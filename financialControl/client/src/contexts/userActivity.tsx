@@ -1,15 +1,19 @@
-import React, { createContext, useEffect } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 type UserContextType = {
   userAuth: () => void;
   userData: { name?: string; email?: string, password?: string } | null;
+  isUserLoggedIn: boolean,
+  setIsUserLoggedIn: (value: boolean) => void
 };
 
 export const UserContext = createContext<UserContextType>({
     userAuth: () => {},
-    userData: null
+    userData: null,
+    isUserLoggedIn: false,
+    setIsUserLoggedIn: (value: boolean) => {}
 });
 
 interface UserProviderProps {
@@ -17,6 +21,9 @@ interface UserProviderProps {
   }
   
 const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(
+    JSON.parse(localStorage.getItem('@isUserLoggedIn') || 'false')
+  )
   const navigate = useNavigate();
   const location = useLocation()
 
@@ -24,18 +31,24 @@ const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   // is user logged
   const userAuth = () => {
-        if (userData && userData.name && location.pathname === '/'){
-            navigate('/summary')
-            toast.info(`Welcome back, ${userData.name}`)
+        if (!userData){
+          localStorage.setItem('@isUserLoggedIn', "false")
+          navigate('/', { replace: true }) // replace: for current history browser
+          console.log('user not login')
         }
+          if (userData && userData.name && location.pathname === '/'){
+            localStorage.setItem('@isUserLoggedIn', "true")
+            navigate('/summary')
+        } 
+        
   };
 
   useEffect(() => {
-    userAuth();
-  }, [navigate]);
+    localStorage.setItem("@isUserLoggedIn", JSON.stringify(isUserLoggedIn));
+  }, [isUserLoggedIn]);
 
   return (
-    <UserContext.Provider value={{ userAuth, userData }}>
+    <UserContext.Provider value={{ userAuth, userData, isUserLoggedIn, setIsUserLoggedIn }}>
       {children}
     </UserContext.Provider>
   );

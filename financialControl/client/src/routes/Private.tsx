@@ -1,19 +1,18 @@
-// import { useState } from "react";
-// import { Navigate } from "react-router-dom";
-// import { ReactNode } from "react";
+import { Navigate } from "react-router-dom";
+import { ReactNode } from "react";
 
-// interface ChildrenProps {
-//     children: ReactNode
-// }
+interface ChildrenProps {
+    children: ReactNode
+}
 
-// const Private: React.FC<ChildrenProps> = ({ children }) => {
-//     const [isUser] = useState(localStorage.getItem('@userData'))
+const Private: React.FC<ChildrenProps> = ({ children }) => {
+    const isUserLoggedIn = localStorage.getItem('@isUserLoggedIn')
 
-//     if (!isUser){
-//         return <Navigate to='/' />
-//     }
+    if (isUserLoggedIn === 'false'){
+        return <Navigate to='/' />
+    }
 
-//     return children
-// }
+    return children
+}
 
-// export default Private
+export default Private
