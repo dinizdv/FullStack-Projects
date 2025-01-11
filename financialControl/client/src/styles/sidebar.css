@@ -34,7 +34,7 @@
 
 .ul-sidebar li {
     padding: 20px 16px;
-    transition: var(--transtion-03);
+    transition: var(--transition-03);
     text-transform: capitalize;
     color: var(--light-color);
     display: flex;

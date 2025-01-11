@@ -9,7 +9,7 @@
 
   --sidebar-width: 280px;
 
-  --transtion-03: all .3s;
+  --transition-03: all .3s;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
   font-family:Lexend, Arial, Helvetica, sans-serif!important;
   background-color: var(--primary-color);
-  transition: var(--transtion-03);
+  transition: var(--transition-03);
 }
 
 h1, h2, h3, h4, h5, h6 {
