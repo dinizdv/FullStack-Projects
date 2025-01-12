@@ -1,7 +1,18 @@
 import express from 'express'
+import cors from 'cors'
 import config from 'config'
 
 const app = express()
+
+// CORS config
+const allowedOrigins = ['http://localhost:5173'] // frontend localhost
+const options: cors.CorsOptions = {
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}
+
+app.use(cors(options))
 
 app.use(express.json())
 
