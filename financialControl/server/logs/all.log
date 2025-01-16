@@ -182,3 +182,34 @@
 2025-01-12 | 12:32 - [32minfo[39m - [32mApplication running on 3000 port[39m
 2025-01-12 | 12:47 - [32minfo[39m - [32mDeleted account with ID: 6783e3a4bc40c5a18bbca151[39m
 2025-01-12 | 12:47 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-16 | 12:29 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:35 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-16 | 12:38 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:38 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-16 | 12:41 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:43 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:43 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:44 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:45 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:45 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:45 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:45 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:45 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:45 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:46 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:46 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:46 - [32minfo[39m - [32mDeleted account with ID: 678927423e8c68c425d72149[39m
+2025-01-16 | 12:53 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:53 - [32minfo[39m - [32mDeleted account with ID: 67892b1f93d6a964bf366acf[39m
+2025-01-16 | 12:53 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:53 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:53 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:53 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:54 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 12:54 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 13:15 - [32minfo[39m - [32mDeleted account with ID: 67892bbce080cab10da1b209[39m
+2025-01-16 | 13:15 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 13:16 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 13:16 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-16 | 13:16 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-16 | 13:17 - [32minfo[39m - [32mApplication running on 3000 port[39m

@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 type UserContextType = {
   userAuth: () => void;
@@ -46,6 +45,8 @@ const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("@isUserLoggedIn", JSON.stringify(isUserLoggedIn));
   }, [isUserLoggedIn]);
+
+  // balance, incomes, expensives
 
   return (
     <UserContext.Provider value={{ userAuth, userData, isUserLoggedIn, setIsUserLoggedIn }}>

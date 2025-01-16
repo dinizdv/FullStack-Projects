@@ -4,3 +4,6 @@
 2024-12-29 | 11:25 - [31merror[39m - [31mError: Operation `users.insertOne()` buffering timed out after 10000ms[39m
 2025-01-12 | 12:03 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
 2025-01-12 | 12:47 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-16 | 12:35 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-16 | 12:38 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-16 | 13:16 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
