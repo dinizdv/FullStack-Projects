@@ -34,6 +34,33 @@ export async function getAccountById(req: Request, res: Response){
     }
 }
 
+export async function editAccount(req: Request, res: Response){
+    try {
+        const id = req.params.id
+
+        if (!mongoose.Types.ObjectId.isValid(id)){
+            res.status(400).json({ error: 'Invalid account ID.' })
+        }
+
+        const updatedFields = Object.keys(req.body)
+
+        const updatedAccount = await AccountModel.findByIdAndUpdate(
+            id,
+            { $set: req.body },
+            { new: true, runValidators: true }
+        )
+
+        if (!updatedAccount){
+            res.status(404).json({ error: 'Account not found.' })
+        }
+
+        res.status(200).json(updatedAccount)
+    } catch (e: any){
+        Logger.error(`Error: ${e.message}`)
+        res.status(500).json({ error: 'Internal server error', details: e.message })
+    }
+}
+
 export async function deleteAccount(req: Request, res: Response){
     try {
         const id = req.params.id

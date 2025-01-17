@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import { createUser, getAllUsers, getUserById } from "./controllers/userController";
-import { deleteAccount, createAccount, getAccountById } from "./controllers/accountController";
+import { deleteAccount, createAccount, getAccountById, editAccount } from "./controllers/accountController";
 import { userCreateValidation } from "./middleware/userValidation";
 import { accountCreateValidation } from "./middleware/accountValidation";
 
@@ -19,4 +19,5 @@ export default router
 // account
 .post('/account', accountCreateValidation(), createAccount)
 .get('/account/:id', getAccountById)
+.put('/account/:id', editAccount)
 .delete('/account/:id', deleteAccount)

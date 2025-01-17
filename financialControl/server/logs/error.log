@@ -7,3 +7,8 @@
 2025-01-16 | 12:35 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
 2025-01-16 | 12:38 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
 2025-01-16 | 13:16 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-17 | 15:53 - [31merror[39m - [31mError: Operation `accounts.findOne()` buffering timed out after 10000ms[39m
+2025-01-17 | 15:53 - [31merror[39m - [31mError: Operation `accounts.findOne()` buffering timed out after 10000ms[39m
+2025-01-17 | 15:55 - [31merror[39m - [31mError: Operation `accounts.findOne()` buffering timed out after 10000ms[39m
+2025-01-17 | 15:55 - [31merror[39m - [31mError: Operation `accounts.findOne()` buffering timed out after 10000ms[39m
+2025-01-17 | 17:17 - [31merror[39m - [31mError: read ECONNRESET[39m
