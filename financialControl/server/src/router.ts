@@ -4,7 +4,7 @@ import { deleteAccount, createAccount, getAccountById, editAccount } from "./con
 import { userCreateValidation } from "./middleware/userValidation";
 import { transactionCreateValidation } from "./middleware/transactionValidation";
 import { accountCreateValidation } from "./middleware/accountValidation";
-import { createTransaction, getTransactionById } from "./controllers/transactionController";
+import { createTransaction, getTransactionById, getTransactions } from "./controllers/transactionController";
 
 const router = Router()
 
@@ -26,4 +26,5 @@ export default router
 
 // transaction
 .post('/transaction', transactionCreateValidation(), createTransaction)
+.get('/transactions/:id', getTransactions) // account_id
 .get('/transaction/:id', getTransactionById) // transaction id

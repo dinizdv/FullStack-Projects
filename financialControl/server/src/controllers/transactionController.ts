@@ -1,5 +1,7 @@
 import Logger from "../../config/logger";
-import { TransactionModel } from "../models/Transaction";
+import { AccountModel } from "../models/Account";
+import { TransactionModel } from "../models/Transaction"
+import { UserModel } from "../models/User";
 import { Request, Response } from "express";
 import mongoose from "mongoose";
 
@@ -35,11 +37,21 @@ export async function getTransactionById(req: Request, res: Response){
     }
 }
 
-// export async function getTransactions(req: Request, res: Response){
-//     try {
-//         // getting userId
-//         const transactions = 
-//     } catch (e: any){
-//         Logger.error(`Error: ${e.message}`)
-//     }
-// }
+export async function getTransactions(req: Request, res: Response){
+    try {
+        const accountId = req.params.id
+        const account = await AccountModel.findById(accountId)
+        if (!account){
+            return res.status(404).json({ error: 'Account not found.' })
+        }
+        const transactions = await TransactionModel.find({ account_id: accountId })
+        if (transactions.length === 0){
+            return res.status(404).json({ error: 'Does not exist transactions.' })
+        }
+
+        res.status(200).json(transactions)
+    } catch (e: any) {
+        Logger.error(`Error: ${e.message}`)
+        res.status(500).json({ error: 'Internal server error', details: e.message })
+    }
+}
