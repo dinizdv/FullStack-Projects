@@ -1,17 +1,40 @@
 import Logger from "../../config/logger";
 import { AccountModel } from "../models/Account";
 import { TransactionModel } from "../models/Transaction"
-import { UserModel } from "../models/User";
 import { Request, Response } from "express";
 import mongoose from "mongoose";
 
-export async function createTransaction(req: Request, res: Response){
+export async function createTransaction(req: Request, res: Response) {
     try {
-        const data = req.body
-        const transaction = await TransactionModel.create(data)
-        res.status(201).json(transaction)
-    } catch (e: any){
-        Logger.error(`Error: ${e.message}`)
+        const { account_id, type, value } = req.body;
+        
+        const account = await AccountModel.findById(account_id);
+        
+        if (!account) {
+            return res.status(404).json({ error: 'Account not found' });
+        }
+
+        if (type === 'income') {
+            account.incomes += value;
+        } else if (type === 'expense') {
+            account.expenses += value;
+        }
+
+        await account.save();
+
+        const transaction = new TransactionModel({
+            account_id: account_id,
+            type: type,
+            category: 'other',
+            value: value
+        });
+
+        const createdTransaction = await transaction.save();
+
+        res.status(201).json(createdTransaction);
+    } catch (e: any) {
+        Logger.error(`Error: ${e.message}`);
+        res.status(500).json({ error: 'Error:', details: e.message });
     }
 }
 

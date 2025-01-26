@@ -360,3 +360,23 @@
 2025-01-25 | 18:35 - [32minfo[39m - [32mApplication running on 3000 port[39m
 2025-01-25 | 18:35 - [32minfo[39m - [32mApplication running on 3000 port[39m
 2025-01-25 | 18:36 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 10:34 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 10:47 - [31merror[39m - [31mError: Cannot set headers after they are sent to the client[39m
+2025-01-26 | 10:48 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 10:54 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 11:54 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:12 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:12 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:15 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:21 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:21 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:22 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:22 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:22 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:22 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:25 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:25 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:25 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:26 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:26 - [32minfo[39m - [32mApplication running on 3000 port[39m
+2025-01-26 | 12:26 - [32minfo[39m - [32mApplication running on 3000 port[39m
