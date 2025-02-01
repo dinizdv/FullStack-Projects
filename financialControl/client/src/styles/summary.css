@@ -30,6 +30,10 @@
     padding: 0 12px 12px 12px;
 }
 
+.container-style-summary > :nth-child(4), :nth-child(6) {
+    grid-column: span 2;
+}
+
 .section-summary {
     background-color: var(--light-color);
     display: flex;
