@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: theme(colors.blue.700);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@layer components {
+  .btn-test {
+    @apply bg-blue-500 text-white transition-all p-3 cursor-pointer text-2xl font-bold rounded; 
+    @apply hover:bg-blue-700;
+    border: 4px solid var(--primary-color);
+  }
+}
