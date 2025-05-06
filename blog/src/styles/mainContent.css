@@ -1,0 +1,29 @@
+#container-main-content {
+    width: 160vw;
+    height: 100vh;
+}
+
+#container-preferences {
+    width: 100%;
+}
+
+.button-preferences {
+    @apply px-8 py-2;
+    border-radius: 24px;
+}
+
+#preferences button {
+    background-color: var(--light-color);
+}
+
+/* carousel */
+.container-carousel {
+    @apply flex justify-between gap-8;
+}
+
+.container-carousel .carousel {
+    background-color: dodgerblue;
+    border-radius: 12px;
+    height: 200px;
+    width: 100%;
+}

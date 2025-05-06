@@ -1,0 +1,15 @@
+.sidebar {
+    @apply w-24 flex flex-col fixed h-full justify-between items-center p-4;
+    background-color: var(--light-color);
+    box-shadow: 0 0 1px var(--dark-color);
+}
+
+.sidebar i {
+    background-color: var(--light-color);
+    border-radius: 50%;
+    align-items: center;
+    font-size: 1.2em;
+    justify-content: center;
+    padding: 16px;
+    transition: all .3s;
+}
