@@ -14,7 +14,7 @@
 
 #container-search {
     @apply p-0 w-96 bg-transparent;
-    border-radius: 24px;
+    border-radius: var(--default-radius);
     border: 1px solid var(--quaternary-color);
 }
 

@@ -13,13 +13,21 @@
   --quaternary-color: #7c7c7c;
   --light-color: #FFF;
   --dark-color: #000;
+  --body-color: #cacaca;
+
+  --lateral-card-height: 240px;
+  --middle-card-height: calc(var(--lateral-card-height) * 1.25);
+
+  --default-radius: 24px;
+
+  --title-card-font-size: 1.6em;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(204, 204, 204);
+  background-color: var(--body-color);
   font-family: "Outfit"!important;
 }
 
@@ -36,11 +44,11 @@ input {
 
   .input {
     @apply px-3 py-2;
-    border-radius: 24px;
+    border-radius: var(--default-radius);
   }
 
   .button {
     @apply px-3 py-2;
-    border-radius: 24px;
+    border-radius: var(--default-radius);
   }
 }

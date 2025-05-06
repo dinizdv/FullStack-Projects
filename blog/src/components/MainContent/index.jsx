@@ -18,17 +18,18 @@ const MainContent = () => {
 
 
     const middleCardIndex = (startIndex + Math.floor(visibleCount / 2)) % numberOfCards;
+
     const ButtonsList = () => {
         return(
-<div className="flex gap-4 p-5">
+<div className="flex gap-4 justify-center">
     {Array.from({ length: numberOfCards }, (_, i) => (
         <button 
             key={i} 
-            className={`px-4 py-2 rounded font-bold transition-all ${
-                i === middleCardIndex ? "bg-yellow-500 text-black scale-110 shadow-lg" : "bg-blue-500 text-white"
-            } hover:bg-blue-700`}
+            className={`button-cards ${
+                i === middleCardIndex ? "middle-button" : ""
+            } `}
         >
-            Botão {i + 1}
+            {i + 1}
         </button>
     ))}
 </div>
@@ -52,11 +53,12 @@ const MainContent = () => {
 
 
             {/* carousel */}
-            <div className="container-carousel">
+            <div className="container-carousel my-6">
     {Array.from({ length: visibleCount }).map((_, i) => {
         const index = (startIndex + i) % numberOfCards; // Rotação circular
+        const isMiddle = index === (startIndex + Math.floor(visibleCount / 2)) % numberOfCards
         return (
-            <div key={index} className="carousel">
+            <div key={index} className={`carousel ${isMiddle ? "carousel-middle" : ""}`}>
                 <h1>card {index + 1} of the carousel</h1>
             </div>
         );
@@ -66,7 +68,6 @@ const MainContent = () => {
 
             <div className="buttons-carousel">
                 <ButtonsList />
-                    
             </div>
             {/* carousel end */}
 
