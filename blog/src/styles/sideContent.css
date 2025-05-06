@@ -1,0 +1,38 @@
+#container-side-content {
+    @apply w-full flex flex-col;
+}
+
+.container-trending-topics {
+    @apply w-full p-6 flex flex-col;
+    background-color: var(--light-color);
+    border-radius: 16px;
+}
+
+.container-trending-topics h1 {
+    @apply mb-3 capitalize;
+    font-size: var(--title-trending-topics);
+}
+
+.trending-topics {
+    @apply px-3 py-5 bg-transparent;
+    border: 1px solid var(--quaternary-color);
+    border-radius: 16px;
+}
+
+.trending-topics span {
+    @apply capitalize;
+}
+
+.container-img-person {
+    width: var(--person-img-width);
+    height: var(--person-img-width);
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.container-img-person img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
