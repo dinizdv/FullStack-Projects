@@ -24,6 +24,8 @@
   --title-trending-topics: 1.6em; /* SideContent.jsx */
 
   --person-img-width: 40px;
+
+  --btn-followers: 120px;
 }
 
 body {

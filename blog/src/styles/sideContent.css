@@ -36,3 +36,24 @@
     border-radius: 50%;
     object-fit: contain;
 }
+
+.recommendations-to-follow {
+    @apply pb-2 bg-transparent;
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+.btn-follow{
+    @apply px-4 py-1 flex items-center justify-center gap-2 bg-transparent;
+    border-radius: var(--default-radius);
+    border: 1px solid var(--dark-color);
+    width: var(--btn-followers);
+}
+
+.btn-unfollow {
+    @apply px-4 py-1 flex items-center justify-center gap-2;
+    color: var(--light-color);
+    width: var(--btn-followers);
+    background-color: var(--dark-color);
+    border-radius: var(--default-radius);
+    border: 1px solid var(--dark-color);
+}
