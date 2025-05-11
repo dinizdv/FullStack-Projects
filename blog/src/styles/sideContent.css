@@ -1,5 +1,7 @@
 #container-side-content {
-    @apply w-full flex flex-col;
+    @apply w-full flex flex-col sticky;
+    top: 100px; /* space between header */
+    height: 86vh;
 }
 
 .container-trending-topics {
@@ -40,13 +42,24 @@
 .recommendations-to-follow {
     @apply pb-2 bg-transparent;
     border-bottom: 1px solid var(--quaternary-color);
+    overflow-y: auto;
+}
+
+.recommendations-to-follow:last-child {
+    @apply pb-0 border-none;
 }
 
 .btn-follow{
-    @apply px-4 py-1 flex items-center justify-center gap-2 bg-transparent;
+    @apply px-4 py-1 flex items-center justify-center gap-2 bg-transparent transition-all duration-300;
     border-radius: var(--default-radius);
     border: 1px solid var(--dark-color);
     width: var(--btn-followers);
+}
+
+.btn-follow:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-color);
 }
 
 .btn-unfollow {

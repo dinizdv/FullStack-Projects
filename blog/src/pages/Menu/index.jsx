@@ -8,7 +8,7 @@ const Menu = () => {
         <>
             <Sidebar />
             <Header />
-            <div className="border-blue-900 gap-6 border-4 ml-24 p-6 flex justify-between">
+            <div className="gap-6 ml-24 p-6 flex justify-between relative">
                 <MainContent />
                 <SideContent />
             </div>
