@@ -1,4 +1,3 @@
-import Person from '../../assets/person.png'
 import '../../styles/sideContent.css'
 
 const SideContent = () => {
@@ -14,7 +13,7 @@ const SideContent = () => {
                     
                     <div className="trending-topics">
                         <div className="flex gap-2 items-center">
-                            <div className="container-img-person"><img src={Person} alt="" /></div>
+                            {/* <div className="container-img-person"><img src={Person} alt="" /></div> */}
                             <span>name</span>
                             <span>- theme</span>
                         </div>
@@ -23,7 +22,7 @@ const SideContent = () => {
 
                     <div className="trending-topics">
                         <div className="flex gap-2 items-center">
-                            <div className="container-img-person"><img src={Person} alt="" /></div>
+                            {/* <div className="container-img-person"><img src={Person} alt="" /></div> */}
                             <span>name</span>
                             <span>- theme</span>
                         </div>
@@ -32,7 +31,7 @@ const SideContent = () => {
 
                     <div className="trending-topics">
                         <div className="flex gap-2 items-center">
-                            <div className="container-img-person"><img src={Person} alt="" /></div>
+                            {/* <div className="container-img-person"><img src={Person} alt="" /></div> */}
                             <span>name</span>
                             <span>- theme</span>
                         </div>
@@ -56,9 +55,9 @@ const SideContent = () => {
                     <div className="recommendations-to-follow">
                         <div className="flex items-center justify-between">
                             <div className='flex gap-2 items-center'>
-                                <div className="container-img-person">
+                                {/* <div className="container-img-person">
                                 <img src={Person} alt="" />
-                                </div>
+                                </div> */}
                                 <span>name</span>
                                 <span>- theme</span>
                             </div>
@@ -72,9 +71,9 @@ const SideContent = () => {
                     <div className="recommendations-to-follow">
                         <div className="flex items-center justify-between">
                             <div className='flex gap-2 items-center'>
-                                <div className="container-img-person">
+                                {/* <div className="container-img-person">
                                 <img src={Person} alt="" />
-                                </div>
+                                </div> */}
                                 <span>name</span>
                                 <span>- theme</span>
                             </div>
@@ -87,25 +86,9 @@ const SideContent = () => {
                     <div className="recommendations-to-follow">
                         <div className="flex items-center justify-between">
                             <div className='flex gap-2 items-center'>
-                                <div className="container-img-person">
+                                {/* <div className="container-img-person">
                                 <img src={Person} alt="" />
-                                </div>
-                                <span>name</span>
-                                <span>- theme</span>
-                            </div>
-                            <div>
-                                <button className='btn-follow'>follow<i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            </div>
-                    </div>
-
-
-                    <div className="recommendations-to-follow">
-                        <div className="flex items-center justify-between">
-                            <div className='flex gap-2 items-center'>
-                                <div className="container-img-person">
-                                <img src={Person} alt="" />
-                                </div>
+                                </div> */}
                                 <span>name</span>
                                 <span>- theme</span>
                             </div>
@@ -119,9 +102,9 @@ const SideContent = () => {
                     <div className="recommendations-to-follow">
                         <div className="flex items-center justify-between">
                             <div className='flex gap-2 items-center'>
-                                <div className="container-img-person">
+                                {/* <div className="container-img-person">
                                 <img src={Person} alt="" />
-                                </div>
+                                </div> */}
                                 <span>name</span>
                                 <span>- theme</span>
                             </div>
@@ -135,9 +118,9 @@ const SideContent = () => {
                     <div className="recommendations-to-follow">
                         <div className="flex items-center justify-between">
                             <div className='flex gap-2 items-center'>
-                                <div className="container-img-person">
+                                {/* <div className="container-img-person">
                                 <img src={Person} alt="" />
-                                </div>
+                                </div> */}
                                 <span>name</span>
                                 <span>- theme</span>
                             </div>
@@ -151,9 +134,25 @@ const SideContent = () => {
                     <div className="recommendations-to-follow">
                         <div className="flex items-center justify-between">
                             <div className='flex gap-2 items-center'>
-                                <div className="container-img-person">
+                                {/* <div className="container-img-person">
                                 <img src={Person} alt="" />
-                                </div>
+                                </div> */}
+                                <span>name</span>
+                                <span>- theme</span>
+                            </div>
+                            <div>
+                                <button className='btn-follow'>follow<i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            </div>
+                    </div>
+
+
+                    <div className="recommendations-to-follow">
+                        <div className="flex items-center justify-between">
+                            <div className='flex gap-2 items-center'>
+                                {/* <div className="container-img-person">
+                                <img src={Person} alt="" />
+                                </div> */}
                                 <span>name</span>
                                 <span>- theme</span>
                             </div>
