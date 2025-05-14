@@ -107,7 +107,11 @@ const MainContent = () => {
         posts.map(post => (
             <div className="container-style-publish">
                 <div className="publish" key={post.id}>
-                <img src={post.image_path} alt="Imagem do Post" />
+                {post.image_path ? (
+                    <img src={post.image_path} alt="Imagem do Post" />
+                ) : (
+                    <></>
+                )}
 
 
                     <div className="container-caption-publish">

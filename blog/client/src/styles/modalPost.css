@@ -1,0 +1,70 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0 , 0, .66);
+}
+
+.modal-content {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+#title-modal {
+    font-size: var(--title-modal);
+}
+
+#btn-close-modal {
+    @apply transition-all duration-300;
+    font-size: var(--title-modal);
+    color: var(--red-color);
+}
+
+#btn-close-modal:hover {
+    background-color: var(--red-color);
+    color: var(--light-color);
+    padding-inline: 10px;
+}
+
+#textarea-modal-post {
+    @apply resize-none mt-4 mb-8 p-3;
+    height: var(--textarea-modal-post-height);
+    box-shadow: 0 0 3px var(--dark-color);
+    outline: none;
+}
+
+.icon-modal {
+    @apply transition-all duration-300 rounded-full;
+    box-shadow: 0 0 2px 1px var(--dark-color);
+    width: var(--icon-modal);
+    height: var(--icon-modal);
+    outline: none;
+}
+
+.icon-modal:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    width: var(--icon-modal);
+    height: var(--icon-modal);
+}
+
+#btn-post {
+    @apply px-8 py-2 transition-all duration-300 capitalize;
+    border-radius: var(--default-radius);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+#btn-post:hover {
+    background-color: var(--hover-primary-color);
+}

@@ -37,3 +37,15 @@
 #search::placeholder {
     color: var(--quaternary-color);
 }
+
+#modal-post {
+    display: none;
+}
+
+#modal-post {
+    display: none;
+}
+
+#modal-post.active {
+    display: flex;
+}

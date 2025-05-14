@@ -75,7 +75,7 @@
 
 .publish img {
     width: 100%;
-    height: 85%;
+    height: calc(var(--publish-max-height) * .75);
     object-fit: contain;
 }
 

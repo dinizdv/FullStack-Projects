@@ -15,6 +15,10 @@
   --dark-color: #000;
   --body-color: #cacaca;
 
+  --red-color: theme(colors.red.600);
+
+  --hover-primary-color: theme(colors.blue.900);
+
   --lateral-card-height: 240px;
   --middle-card-height: calc(var(--lateral-card-height) * 1.25);
 
@@ -22,11 +26,14 @@
 
   --title-card-font-size: 1.6em; /* MainContent.jsx */
   --title-trending-topics: 1.6em; /* SideContent.jsx */
+  --title-modal: 1.6em; /* ModalPost.jsx */
 
   --person-img-width: 40px;
   --publish-max-height: 600px;
+  --textarea-modal-post-height: 400px;
 
   --btn-followers: 120px;
+  --icon-modal: 36px; /* ModalPost.jsx */
 
   --scrollbar-width: 10px;
 }
