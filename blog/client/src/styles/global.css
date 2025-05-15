@@ -16,6 +16,7 @@
   --body-color: #cacaca;
 
   --red-color: theme(colors.red.600);
+  --success-color: theme(colors.green.600);
 
   --hover-primary-color: theme(colors.blue.900);
 

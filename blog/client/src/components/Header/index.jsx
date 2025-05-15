@@ -20,18 +20,19 @@ const Header = () => {
                     <i className="fa-solid fa-filter mr-1"></i>filter
                 </button>
             </div>
-            <div className="write">
-                <button className="button" id="btn-write" onClick={toggleModal}>
-                    <i className="fa-solid fa-pen-to-square mr-1"></i>write
-                </button>
-            </div>
 
-            {/* Modal aparece com base no estado */}
+            {/* modal */}
             {modalIsOpen && (
                 <div id="modal-post" className={modalIsOpen ? "active" : ""}>
                     <ModalPost />
                 </div>
             )}
+
+            <div className="write">
+                <button className="button" id="btn-write" onClick={toggleModal}>
+                    <i className="fa-solid fa-pen-to-square mr-1"></i>write
+                </button>
+            </div>
         </div>
     );
 };

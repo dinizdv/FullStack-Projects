@@ -41,11 +41,7 @@
 #modal-post {
     display: none;
 }
-
-#modal-post {
-    display: none;
-}
-
+    
 #modal-post.active {
-    display: flex;
+    display: block;
 }

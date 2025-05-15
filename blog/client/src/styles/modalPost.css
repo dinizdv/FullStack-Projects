@@ -41,11 +41,30 @@
     height: var(--textarea-modal-post-height);
     box-shadow: 0 0 3px var(--dark-color);
     outline: none;
+    border-radius: 8px;
+}
+
+.description-img-preview {
+    font-weight: 300;
+}
+
+.description-img-preview b {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.image-preview {
+    width: 50%;
+    margin-bottom: 24px;
+    max-height: 260px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 3px var(--dark-color);
 }
 
 .icon-modal {
     @apply transition-all duration-300 rounded-full;
-    box-shadow: 0 0 2px 1px var(--dark-color);
+    box-shadow: 0 0 3px var(--dark-color);
     width: var(--icon-modal);
     height: var(--icon-modal);
     outline: none;
