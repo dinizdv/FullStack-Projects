@@ -31,7 +31,9 @@
 
   --person-img-width: 40px;
   --publish-max-height: 600px;
-  --textarea-modal-post-height: 400px;
+  --textarea-modal-post-height: 270px;
+  --image-modal-post: 270px;
+  --person-post-width: 50px;
 
   --btn-followers: 120px;
   --icon-modal: 36px; /* ModalPost.jsx */

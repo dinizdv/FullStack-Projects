@@ -44,6 +44,59 @@
     border-radius: 8px;
 }
 
+.tag-people {
+    @apply resize-none mt-4 mb-8 flex flex-col;
+    display: none;
+    height: var(--textarea-modal-post-height);
+    box-shadow: 0 0 3px var(--dark-color);
+    outline: none;
+    border-radius: 8px;
+}
+
+.overflow-y-auto {
+    height: calc(var(--textarea-modal-post-height) - 40px); /* fixing overflow bug */
+}
+
+.input-search-tag input {
+    @apply w-full h-auto p-2;
+    border-bottom: 1px solid var(--quaternary-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.person {
+    @apply flex justify-between items-center w-full h-auto p-2;
+    box-shadow: 0 0 1px var(--dark-color);
+}
+
+.person button {
+    @apply rounded-full p-2 flex items-center justify-center transition-all duration-300;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 0 3px var(--dark-color);
+    outline: none;
+}
+
+.person button i {
+    font-size: 1em;
+}
+
+/* .person button */
+.btn-check-able {
+    background-color: var(--success-color)!important;
+    color: var(--light-color)!important;
+    box-shadow: 0 0 3px var(--success-color)!important;
+}
+
+.person img {
+    width: var(--person-post-width);
+    height: var(--person-post-width);
+    border-radius: 50%;
+    border: 1px solid blue;
+    object-fit: contain;
+}
+
+
 .description-img-preview {
     font-weight: 300;
 }
@@ -56,7 +109,7 @@
 .image-preview {
     width: 50%;
     margin-bottom: 24px;
-    max-height: 260px;
+    max-height: var(--image-modal-post);
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 0 3px var(--dark-color);
@@ -85,5 +138,23 @@
 }
 
 #btn-post:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.disabled-btn-tag {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+
+.btn-tag {
+    @apply px-8 py-2 transition-all duration-300 capitalize;
+    border-radius: var(--default-radius);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    display: none;
+}
+
+.btn-tag:hover {
     background-color: var(--hover-primary-color);
 }
